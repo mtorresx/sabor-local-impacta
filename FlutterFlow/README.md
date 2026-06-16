@@ -18,6 +18,12 @@ O aplicativo não foi montado apenas no nível visual: toda a lógica de funcion
 
 - **Data Schema** — estrutura de tipos de dados (data types) criada no FlutterFlow para representar de forma padronizada as entidades do sistema, como produto, pedido, endereço, forma de pagamento e usuário. Esses schemas garantem que os dados recebidos das API Calls sejam consumidos de forma consistente em todas as telas do app.
 
+
+## Lógica de Navegação entre as telas FlutterFlow:
+<img width="1245" height="787" alt="Captura de tela 2026-06-16 131435" src="https://github.com/user-attachments/assets/8928b997-fcbd-4518-b5b4-c7ec1e6af70c" />
+<img width="1324" height="809" alt="image" src="https://github.com/user-attachments/assets/35bf4982-c76a-4b3c-be38-e92795e06be3" />
+
+
 ## Telas principais
 
 Cadastro, login, recuperação de senha, verificação de código por e-mail, listagem de cardápio, carrinho, cadastro de endereço, checkout, pagamento via Pix (com QR Code) e cartão, confirmação e acompanhamento de pedido.
