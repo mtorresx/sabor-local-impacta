@@ -39,17 +39,13 @@ O projeto contemplou todo o ciclo de desenvolvimento de produto: levantamento de
 
 A arquitetura do SLFood foi estruturada em camadas integradas por API, combinando ferramentas low-code/no-code com automações orientadas a eventos:
 
-- **Frontend (App do Cliente):** desenvolvido em FlutterFlow, consumindo a API do backend para autenticação, listagem de cardápio, carrinho, criação de pedidos e pagamento.
-- **Painel de Gestão:** interface administrativa para controle de pedidos, cardápio, funcionários e permissões de acesso por papel.
-- **Backend/API:** construído no Xano, responsável pela lógica de negócio, autenticação e exposição dos endpoints consumidos pelo app e pelo painel.
+- **Frontend (App do Cliente e Painel de Gestão):** desenvolvidos em FlutterFlow, consumindo a API do backend para autenticação, listagem de cardápio, carrinho, criação de pedidos, pagamento, gestão de cardápio, funcionários e permissões.
+- **Backend/API:** construído no Xano, responsável pela lógica de negócio, autenticação e exposição dos endpoints consumidos pelo app, pelo painel e pelo chatbot.
 - **Banco de Dados:** modelo relacional no próprio Xano, estruturado para suportar clientes, pedidos, itens de cardápio, funcionários, permissões e transações.
 - **Automação e Atendimento:** fluxos no n8n conectando o bot do Telegram a um agente de IA, capaz de consultar informações do cardápio e do restaurante para responder o cliente.
 - **Pagamentos:** integração de fluxo de pagamento via Pix e cartão, conectada ao processo de finalização de pedido.
 
 Essa combinação permitiu validar, em escala acadêmica, uma arquitetura orientada a eventos e integrações via API entre ferramentas distintas — sem a necessidade de desenvolver cada camada do zero em código tradicional.
-
-📎 Diagrama de arquitetura: `docs/arquitetura/diagrama-arquitetura.png`
-📎 Modelo entidade-relacionamento: `docs/modelagem/modelo-er.png`
 
 ---
 
@@ -74,12 +70,6 @@ Essa combinação permitiu validar, em escala acadêmica, uma arquitetura orient
 - Chatbot de atendimento via Telegram
 - Agente de IA com consulta a informações do restaurante e do cardápio
 
-### Documentação
-- Levantamento de requisitos funcionais e não funcionais
-- Regras de negócio
-- Mapeamento de processos operacionais
-- Arquitetura e modelagem de dados
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -98,13 +88,9 @@ Essa combinação permitiu validar, em escala acadêmica, uma arquitetura orient
 
 ## 🎥 Demonstração
 
-> Conteúdo disponível na pasta `demonstracao/` e nas pastas de prints de cada módulo (`app-cliente/prints`, `painel-admin/prints`, `chatbot-telegram/prints`).
+Vídeo demonstrando o funcionamento completo dos fluxos do chatbot via Telegram disponível na pasta `N8N/`.
 
-Itens incluídos:
-- Prints do fluxo do cliente: cadastro → cardápio → carrinho → pagamento
-- Prints do painel administrativo
-- Print/exemplo de conversa com o chatbot no Telegram
-- Visão geral do fluxo de automação no n8n
+Imagens das telas, fluxos e documentação técnica de cada módulo estão organizadas nas pastas `Design/`, `FlutterFlow/`, `Xano/` e `N8N/`.
 
 ---
 
@@ -132,18 +118,17 @@ Itens incluídos:
 ## 📁 Estrutura do Repositório
 
 ```
-sabor-local-slfood/
-├── docs/                  # Requisitos, regras de negócio, arquitetura e modelagem
-├── design/                # Telas e protótipos do Figma
-├── app-cliente/           # Prints do aplicativo do cliente
-├── painel-admin/          # Prints do painel administrativo
-├── automacoes-n8n/        # Fluxos JSON do n8n e prints
-├── chatbot-telegram/      # Prints de exemplos de atendimento
-└── demonstracao/          # Material de demonstração geral
+sabor-local-impacta/
+├── Design/         # Telas, fluxos e design system criados no Figma
+├── FlutterFlow/    # App do cliente e painel administrativo
+├── Xano/           # Backend, banco de dados e documentação das APIs
+├── N8N/            # Automação do chatbot via Telegram (fluxos JSON e vídeo demonstrativo)
+├── .gitignore
+└── README.md
 ```
 
 ---
 
 ## 📄 Licença
 
-Este é um projeto acadêmico desenvolvido para fins de aprendizado. Consulte o arquivo `LICENSE` para mais detalhes.
+Este é um projeto acadêmico desenvolvido para fins de aprendizado.
