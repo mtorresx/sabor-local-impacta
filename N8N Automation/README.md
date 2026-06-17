@@ -1,3 +1,7 @@
+# 🤖 N8N — Automação do Chatbot Telegram
+
+Esta pasta documenta a automação do chatbot de atendimento do SLFood, construída no n8n e integrada ao Telegram. O chatbot permite que o cliente faça pedidos, gere pagamento via Pix, consulte status do pedido e tire dúvidas com suporte automatizado por IA — tudo diretamente pela conversa no Telegram.
+
 ## Visão geral
 
 O backend oficial do sistema permanece no Xano, responsável por armazenar e controlar pedidos, itens, transações e status. O n8n atua como camada de automação, orquestrando a comunicação entre Telegram, Xano, Asaas (gateway de pagamento Pix) e o agente de IA.
